@@ -1,12 +1,11 @@
 # ***Dokumentacja***
 
-![screenshot.png](/Assets/screenshot.png)
 
 # Spis funkcji
 1. generateComputerMove()
 2. getPlayerMove()
 3. determineWinner()
-4. generuj_haslo()
+4. playAgain()
 5. main()
 
 
