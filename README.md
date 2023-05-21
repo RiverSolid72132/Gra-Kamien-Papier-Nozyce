@@ -56,96 +56,42 @@ void determineWinner(int playerMove, int computerMove) {
 }
 ```
 
-# 4. *generuj_haslo()*
+# 4. *playAgain()*
 
-Ta funkcja generuje losowe hasło o zadanej długości, z wykorzystaniem podanych przez użytkownika opcji
+Funkcja **playAgain()** pozwala na interakcję z użytkownikiem, pytając go, czy chce zagrać ponownie. Zwraca **true**, jeśli użytkownik wybierze 'T' lub 't', co oznacza chęć ponownej gry. Zwraca **false**, jeśli użytkownik wybierze 'N' lub 'n', co oznacza zakończenie programu.
 
-
-
-**dlugosc** : długość generowanego hasła
-
-**male_litery** : określa, czy mają być wykorzystane małe litery
-
-**wielkie_litery**: określa, czy mają być wykorzystane wielkie litery
-
-**cyfry**: określa, czy mają być wykorzystane cyfry
-
-**znaki_specjalne**: określa, czy mają być wykorzystane znaki specjalne
-
-
-
-Funkcja tworzy string dostepne_znaki, który składa się z znaków wybranych przez użytkownika (zależnie od wartości flag). Następnie losuje indeksy z dostepne_znaki i dodaje odpowiednie znaki do zmiennej haslo. Ostatecznie funkcja zwraca wygenerowane hasło.
 
 ```C++
-string generuj_haslo(int dlugosc, bool male_litery, bool wielkie_litery, bool cyfry, bool znaki_specjalne)
- {
-    string haslo = "";
-    string male_litery_str = "abcdefghijklmnopqrstuvwxyz";
-    string wielkie_litery_str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    string cyfry_str = "0123456789";
-    string znaki_specjalne_str = "!@#$%^&*()_+-={}[]|\\:;\"'<>,.?/";
-
-    string dostepne_znaki = "";
-     if(male_litery) dostepne_znaki += male_litery_str;
-    if (wielkie_litery) dostepne_znaki += wielkie_litery_str;
-    if (cyfry) dostepne_znaki += cyfry_str;
-    if (znaki_specjalne) dostepne_znaki += znaki_specjalne_str;
-
-    int dostepne_znaki_dlugosc = dostepne_znaki.length();
-    srand(time(0));
-    for (int i = 0; i < dlugosc; i++) {
-        int indeks = rand() % dostepne_znaki_dlugosc;
-        haslo += dostepne_znaki[indeks];
-    }
-    return haslo;
-
+bool playAgain() {
+    char choice;
+    cout<<endl;
+    cout << "Czy chcesz zagrac ponownie? (T/N): ";
+    cin >> choice;
+    return (choice == 'T' || choice == 't'); // Sprawdzenie czy uzytkownik chce zagrac ponownie
 }
 ```
 
 # 5. *main()*
 
-Ta funkcja zawiera funkcje imie_pracownika, nazwisko_pracownika, wprowadz_stanowisko i generuj_haslo. Funkcje te służą do wprowadzenia imienia, nazwiska, wyboru stanowiska oraz generowania hasła. W funkcji main, użytkownik jest proszony o podanie informacji potrzebnych do wygenerowania hasła, a następnie są one przekazywane do funkcji generuj_haslo, która generuje losowe hasło na podstawie podanych informacji. Następnie, funkcja main wyświetla wygenerowane hasło oraz informacje o pracowniku, w tym imię, nazwisko, stanowisko i wygenerowane hasło.
+Główna funkcja main() kontroluje przebieg gry, pobiera ruchy gracza i komputera, sprawdza wynik gry oraz pytanie użytkownika o ponowną grę.
 
 ```C++
-int main()
-{
-    string imie ;
-    string nazwisko ;
-    string stanowisko;
+int main() {
+    srand(time(0)); // Inicjalizacja generatora liczb losowych
 
-    int dlugosc;
-    bool male_litery, wielkie_litery, cyfry, znaki_specjalne;
+    cout << "WITAJ W GRZE KAMIEN, PAPIER, NOZYCE!" << endl << endl;
+    cout << "1 - kamien, 2 - papier, 3 - nozyce" << endl;
 
-       imie = imie_pracownika(imie);
-        nazwisko = nazwisko_pracownika(nazwisko);
-        stanowisko = wprowadz_stanowisko(stanowisko);
-        generuj_haslo(dlugosc, male_litery, wielkie_litery, cyfry, znaki_specjalne);
+    bool play = true;
+    while (play) {
+        int playerMove = getPlayerMove();
+        int computerMove = generateComputerMove();
 
+        determineWinner(playerMove, computerMove); // Sprawdzenie wyniku gry
 
-            cout << "Podaj dlugosc hasla: "<<endl<<endl;
-                cin >> dlugosc;
-            cout<<endl;
-
-            cout << "Uzywac malych liter? (1-tak, 0-nie): "<<endl<<endl;
-                cin>>male_litery;
-
-            cout << "Uzywac wielkich liter? (1-tak, 0-nie): "<<endl<<endl;
-                cin >> wielkie_litery;
-            cout<<endl;
-
-            cout << "Uzywac cyfr? (1-tak, 0-nie): "<<endl<<endl;
-                cin >> cyfry;
-            cout<<endl;
-
-            cout << "Uzywac znakow specjalnych? (1-tak, 0-nie): "<<endl<<endl;
-                cin >> znaki_specjalne;
-            cout<<endl;
-
-            string haslo = generuj_haslo(dlugosc, male_litery, wielkie_litery, cyfry, znaki_specjalne);
-            cout << "Wygenerowane haslo: " << haslo << endl<<endl;
-
-            cout<<"Dane pracownika: "<<imie<<", "<<nazwisko<<", "<<stanowisko<<", "<<haslo<<endl;
-
+        play = playAgain(); // Czy uzytkownik chce zagrac ponownie?
+        cout << endl;
+    }
 
     return 0;
 }
