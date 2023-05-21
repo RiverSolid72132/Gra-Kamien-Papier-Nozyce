@@ -4,8 +4,8 @@
 
 # Spis funkcji
 1. generateComputerMove()
-2. nazwisko_pracownika()
-3. wprowadz_stanowisko()
+2. getPlayerMove()
+3. determineWinner()
 4. generuj_haslo()
 5. main()
 
@@ -14,63 +14,45 @@
 
 # 1. *generateComputerMove()*
 
-Funkcja *generateComputerMove()* generuje losowy ruch komputera w zakresie od 1 do 3. Wykorzystuje do tego funkcję *rand()*, która zwraca liczbę pseudolosową, a operator *%* służy do obliczenia reszty z dzielenia. W tym przypadku % 3 powoduje ograniczenie wyniku do zakresu od 0 do 2, a dodanie + 1 przesuwa ten zakres do 1-3, co odpowiada kamieniowi, papierowi i nożycym. Ostatecznie funkcja zwraca wylosowany ruch komputera.
+Funkcja **generateComputerMove()** generuje losowy ruch komputera w zakresie od 1 do 3. Wykorzystuje do tego funkcję **rand()**, która zwraca liczbę pseudolosową, a operator **%** służy do obliczenia reszty z dzielenia. W tym przypadku % 3 powoduje ograniczenie wyniku do zakresu od 0 do 2, a dodanie + 1 przesuwa ten zakres do 1-3, co odpowiada kamieniowi, papierowi i nożycym. Ostatecznie funkcja zwraca wylosowany ruch komputera.
 
 ```C++
-string imie_pracownika(string imie)
-{
-
-    cout<<"Dane Pracownika: "<<endl<<endl;
-    cout<<"Imie:     "<<"   ";
-    cin>>imie;
-
-    return imie;
-
+int generateComputerMove() {
+    return rand() % 3 + 1; // Generowanie losowego ruchu komputera (1-3)
 }
 ```
-# 2. *nazwisko_pracownika()*
+# 2. *getPlayerMove()*
 
-Ta funkcja służy do pobierania nazwiska pracownika od użytkownika. Po wywołaniu funkcji, użytkownik zostanie poproszony o wprowadzenie nazwiska, a następnie zostanie ono zwrócone
+Funkcja ta umożliwia graczowi wprowadzenie numeru od 1 do 3, odpowiadającego kamieniowi, papierowi lub nożyczkom, a następnie zwraca ten wybrany ruch do dalszego przetwarzania w programie.
 
 ```C++
-string nazwisko_pracownika(string nazwisko){
-    cout<<"Nazwisko: "<<"   ";
-    cin>>nazwisko;
-
-    return nazwisko;
+int getPlayerMove() {
+    int move;
+    cout << "Wybierz swoj ruch (1-3): ";
+    cin >> move;
+    cout << endl;
+    return move;
 }
 ```
-# 3. *wprowadz_stanowisko()*
+# 3. *determineWinner()*
 
-Ta funkcja służy do pobierania informacji od użytkownika na temat stanowiska, jakie pełni w firmie. Na początku funkcja wyświetla listę stanowisk, z której użytkownik może wybrać odpowiednie. Następnie, użytkownik jest proszony o wprowadzenie numeru odpowiadającego wybranemu stanowisku. Wprowadzona wartość jest przypisywana do zmiennej stanowisko. W zależności od wyboru użytkownika, wartość zmiennej stanowisko zostanie przypisana jednemu z czterech dostępnych stanowisk ("Kierownik", "Starszy programista", "Młodszy programista" lub "Tester"). Ostatecznie, funkcja zwraca wybrane stanowisko.
+Funkcja determineWinner() jest odpowiedzialna za określenie zwycięzcy gry w kamień, papier, nożyce na podstawie wybranych ruchów gracza i komputera.
 
 ```C++
-string wprowadz_stanowisko( string stanowisko) {
+void determineWinner(int playerMove, int computerMove) {
+    cout << "Komputer wybral: " << computerMove << endl<<endl;
 
-    cout<<endl;
-    cout<<"1.Kierownik"<<endl;
-    cout<<"2.Starszy programista"<<endl;
-    cout<<"3.Mlodszy programista"<<endl;
-    cout<<"4.Tester"<<endl<<endl;
-
-     cout<<"Wybierz stanowisko: "<<endl<<endl;
-     cin>>stanowisko;
-
-        if(stanowisko == "1"){
-            stanowisko="Kierownik";
-            }
-            else if(stanowisko == "2"){
-            stanowisko="Starszy programista";
-            }
-            else if(stanowisko == "3"){
-            stanowisko="Mlodszy programista";
-                }
-                else {
-                stanowisko="Tester";
-                    }
-
-    return stanowisko;
-
+    if (playerMove == computerMove) {
+        cout << "Remis!" << endl<<endl;;
+    } else if (
+        (playerMove == 1 && computerMove == 3) ||
+        (playerMove == 2 && computerMove == 1) ||
+        (playerMove == 3 && computerMove == 2)
+    ) {
+        cout << "Gracz wygrywa!" << endl<<endl;
+    } else {
+        cout << "Komputer wygrywa!" << endl<<endl;
+    }
 }
 ```
 
