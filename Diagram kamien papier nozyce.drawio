@@ -1,34 +1,34 @@
-<mxfile host="app.diagrams.net" modified="2023-05-21T22:05:35.467Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="PBREPWdFx52jPc4o3io-" version="21.3.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-05-21T22:24:54.075Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="QuJ3s9TvpFTnCsjNleOp" version="21.3.2" type="github">
   <diagram name="Strona-1" id="I9damSPB7lgclRVi06HJ">
-    <mxGraphModel dx="880" dy="452" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1035" dy="532" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="e7PhjsWQX8LqfqK1kS2G-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="e7PhjsWQX8LqfqK1kS2G-1" target="e7PhjsWQX8LqfqK1kS2G-2">
+        <mxCell id="e7PhjsWQX8LqfqK1kS2G-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="e7PhjsWQX8LqfqK1kS2G-1" target="e7PhjsWQX8LqfqK1kS2G-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e7PhjsWQX8LqfqK1kS2G-1" value="&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;Wygenerowanie funkcji która będzie generować losowe liczby w zakresie od 1 do 3" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="e7PhjsWQX8LqfqK1kS2G-1" value="&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;Wygenerowanie funkcji która będzie generować losowe liczby w zakresie od 1 do 3" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="254" y="20" width="320" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="e7PhjsWQX8LqfqK1kS2G-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="e7PhjsWQX8LqfqK1kS2G-2" target="e7PhjsWQX8LqfqK1kS2G-4">
+        <mxCell id="e7PhjsWQX8LqfqK1kS2G-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="e7PhjsWQX8LqfqK1kS2G-2" target="e7PhjsWQX8LqfqK1kS2G-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e7PhjsWQX8LqfqK1kS2G-2" value="Wygenerowanie funkcji która ta umożliwia graczowi wprowadzenie numeru od 1 do 3, odpowiadającego kamieniowi, papierowi lub nożyczkom" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="e7PhjsWQX8LqfqK1kS2G-2" value="Wygenerowanie funkcji która ta umożliwia graczowi wprowadzenie numeru od 1 do 3, odpowiadającego kamieniowi, papierowi lub nożyczkom" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="254" y="170" width="320" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="e7PhjsWQX8LqfqK1kS2G-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="e7PhjsWQX8LqfqK1kS2G-4" target="e7PhjsWQX8LqfqK1kS2G-6">
+        <mxCell id="e7PhjsWQX8LqfqK1kS2G-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="e7PhjsWQX8LqfqK1kS2G-4" target="e7PhjsWQX8LqfqK1kS2G-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e7PhjsWQX8LqfqK1kS2G-4" value="Wprowadzenie funkcji która będzie określać zwycięzcę gry" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="e7PhjsWQX8LqfqK1kS2G-4" value="Wprowadzenie funkcji która będzie określać zwycięzcę gry" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="254" y="330" width="320" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="e7PhjsWQX8LqfqK1kS2G-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="e7PhjsWQX8LqfqK1kS2G-6" target="e7PhjsWQX8LqfqK1kS2G-7">
+        <mxCell id="e7PhjsWQX8LqfqK1kS2G-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="e7PhjsWQX8LqfqK1kS2G-6" target="e7PhjsWQX8LqfqK1kS2G-7" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e7PhjsWQX8LqfqK1kS2G-6" value="Wprowadzenie funkcji która pozwala na interakcję z użytkownikiem, pytając go, czy chce zagrać ponownie" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="e7PhjsWQX8LqfqK1kS2G-6" value="Wprowadzenie funkcji która pozwala na interakcję z użytkownikiem, pytając go, czy chce zagrać ponownie" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="254" y="500" width="320" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="e7PhjsWQX8LqfqK1kS2G-7" value="Wygenerowanie głównej funkcji która kontroluje przebieg gry, pobiera ruchy gracza i komputera, sprawdza wynik gry oraz pytanie użytkownika o ponowną grę" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="e7PhjsWQX8LqfqK1kS2G-7" value="Wygenerowanie głównej funkcji która kontroluje przebieg gry, pobiera ruchy gracza i komputera, sprawdza wynik gry oraz pytanie użytkownika o ponowną grę" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="254" y="660" width="320" height="140" as="geometry" />
         </mxCell>
       </root>
