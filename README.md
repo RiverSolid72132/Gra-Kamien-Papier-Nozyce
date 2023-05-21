@@ -1,6 +1,6 @@
 # ***Dokumentacja***
 
-# Kamień,Papier Nożyce:
+# Kamień Papier Nożyce:
 Gra w kamień, papier, nożyce jest grą towarzyską, w której dwie osoby wykonują ruchy, wybierając jeden z trzech elementów: kamień, papier lub nożyce. Poniżej przedstawiam zasady tej gry:
 
 
