@@ -3,7 +3,7 @@
 ![screenshot.png](/Assets/screenshot.png)
 
 # Spis funkcji
-1. imie_pracownika()
+1. generateComputerMove()
 2. nazwisko_pracownika()
 3. wprowadz_stanowisko()
 4. generuj_haslo()
@@ -12,9 +12,9 @@
 
 # Opis funkcji 
 
-# 1. *imie_pracownika()*
+# 1. *generateComputerMove()*
 
-Funkcja służy do pobierania imienia pracownika od użytkownika. Po wywołaniu funkcji, użytkownik zostanie poproszony o wprowadzenie imienia, a następnie zostanie ono zwrócone
+Funkcja *generateComputerMove()* generuje losowy ruch komputera w zakresie od 1 do 3. Wykorzystuje do tego funkcję *rand()*, która zwraca liczbę pseudolosową, a operator *%* służy do obliczenia reszty z dzielenia. W tym przypadku % 3 powoduje ograniczenie wyniku do zakresu od 0 do 2, a dodanie + 1 przesuwa ten zakres do 1-3, co odpowiada kamieniowi, papierowi i nożycym. Ostatecznie funkcja zwraca wylosowany ruch komputera.
 
 ```C++
 string imie_pracownika(string imie)
