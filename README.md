@@ -1,5 +1,16 @@
 # ***Dokumentacja***
 
+# Kamień,Papier Nożyce:
+Gra w kamień, papier, nożyce jest grą towarzyską, w której dwie osoby wykonują ruchy, wybierając jeden z trzech elementów: kamień, papier lub nożyce. Poniżej przedstawiam zasady tej gry:
+
+
+1.Kamień pokonuje nożyce: Jeśli jedna osoba wybierze kamień, a druga nożyce, kamień zwycięża, ponieważ kamień tępi nożyce.
+
+2.Papier pokonuje kamień: Jeśli jedna osoba wybierze papier, a druga kamień, papier zwycięża, ponieważ można owinąć kamień wokół papieru.
+
+3.Nożyce pokonują papier: Jeśli jedna osoba wybierze nożyce, a druga papier, nożyce zwyciężają, ponieważ nożyczki są w stanie je przeciąć.
+
+4.Jeśli obie osoby wybiorą ten sam element, mamy remis.
 
 # Spis funkcji
 1. generateComputerMove()
